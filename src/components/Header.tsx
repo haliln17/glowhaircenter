@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail, Globe } from 'lucide-react';
 import { translations } from '../utils/translations';
+import { useNavigate } from 'react-router-dom';
 
 interface HeaderProps {
   language: string;
-  setLanguage: (lang: string) => void;
 }
 
-export default function Header({ language, setLanguage }: HeaderProps) {
+export default function Header({ language }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
   const t = translations[language];
 
   useEffect(() => {
@@ -54,7 +55,7 @@ export default function Header({ language, setLanguage }: HeaderProps) {
               <Globe size={14} />
               <select
                 value={language}
-                onChange={(e) => setLanguage(e.target.value)}
+                onChange={(e) => navigate(`/${e.target.value}/`)}
                 className="bg-transparent border-none text-white text-sm focus:outline-none cursor-pointer hover:text-teal-400 transition-colors"
               >
                 {languages.map((lang) => (

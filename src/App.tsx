@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { Routes, Route, Navigate, useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -9,27 +10,45 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import { translations } from './utils/translations';
 
-function App() {
-  const [language, setLanguage] = useState('it');
+const SUPPORTED_LANGUAGES = ['it', 'en', 'ar', 'tr'];
 
-  useEffect(() => {
-    document.documentElement.lang = language;
-  }, [language]);
+function MainApp() {
+  const { lang } = useParams();
+
+  if (!lang || !SUPPORTED_LANGUAGES.includes(lang)) {
+    return <Navigate to="/it/" replace />;
+  }
+
+  const t = translations[lang] || translations['it'];
 
   return (
     <div className="min-h-screen bg-white">
-      <Header language={language} setLanguage={setLanguage} />
-      <Hero language={language} />
-      <About language={language} />
-      <Services language={language} />
-      <Gallery language={language} />
-      <WhyChooseUs language={language} />
-      <Testimonials language={language} />
-      <Contact language={language} />
-      <Footer language={language} />
+      <Helmet>
+        <html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'} />
+        <title>Glow Hair Center {t.tagline ? `- ${t.tagline}` : ''}</title>
+      </Helmet>
+      <Header language={lang} />
+      <Hero language={lang} />
+      <About language={lang} />
+      <Services language={lang} />
+      <Gallery language={lang} />
+      <WhyChooseUs language={lang} />
+      <Testimonials language={lang} />
+      <Contact language={lang} />
+      <Footer language={lang} />
       <WhatsAppButton />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/:lang/*" element={<MainApp />} />
+      <Route path="*" element={<Navigate to="/it/" replace />} />
+    </Routes>
   );
 }
 
