@@ -12,7 +12,7 @@ export const translations: Record<string, any> = {
     },
     hero: {
       badge: "International Hair Transplant Experts",
-      headline: "Rediscover Your Confidence with Glow Hair Center",
+      headline: "Hair Transplant in Albania: Excellence & Natural Results",
       subheadline: "An international hair transplant team based in Albania",
       description: "Trusted by clients from Europe, the Middle East, and the USA. Experience world-class hair restoration with natural, guaranteed results.",
       cta: {
@@ -224,6 +224,19 @@ export const translations: Record<string, any> = {
       terms: "Terms of Service",
       cookies: "Cookie Policy",
     },
+    altTexts: {
+      beforeAfter: "FUE hair transplant before and after results in Tirana",
+      clinic: "Hair transplant clinic and facility in Tirana"
+    },
+    faq: {
+      title: "Frequently Asked Questions",
+      questions: [
+        { q: "Is the hair transplant painful?", a: "No, thanks to local anesthesia you will not feel any pain during the procedure." },
+        { q: "How long do the transplant results last?", a: "The results are permanent, as the transplanted hair is resistant to falling out." },
+        { q: "When will I be able to see the final results?", a: "The first results are visible after 3-4 months, while the final result can be appreciated after 12-15 months." },
+        { q: "How many days do I need to stay in Tirana?", a: "Usually a stay of 3 days and 2 nights is enough to complete the entire procedure and the first post-operative care." }
+      ]
+    }
   },
   ar: {
     tagline: "استعد ثقتك بشكل طبيعي",
@@ -238,7 +251,7 @@ export const translations: Record<string, any> = {
     },
     hero: {
       badge: "خبراء زراعة الشعر العالميون",
-      headline: "استعد ثقتك مع عيادة فايب للشعر",
+      headline: "زراعة الشعر في ألبانيا: التميز والنتائج الطبيعية",
       subheadline: "فريق دولي لزراعة الشعر في ألبانيا",
       description: "موثوق به من قبل العملاء من أوروبا والشرق الأوسط والولايات المتحدة. استمتع باستعادة شعر على مستوى عالمي مع نتائج طبيعية مضمونة.",
       cta: {
@@ -450,6 +463,19 @@ export const translations: Record<string, any> = {
       terms: "شروط الخدمة",
       cookies: "سياسة ملفات تعريف الارتباط",
     },
+    altTexts: {
+      beforeAfter: "نتائج زراعة الشعر بتقنية FUE قبل وبعد في تيرانا",
+      clinic: "عيادة زراعة الشعر والمرافق في تيرانا"
+    },
+    faq: {
+      title: "الأسئلة الشائعة",
+      questions: [
+        { q: "هل زراعة الشعر مؤلمة؟", a: "لا، بفضل التخدير الموضعي لن تشعر بأي ألم أثناء الإجراء." },
+        { q: "إلى متى تستمر نتائج زراعة الشعر؟", a: "النتائج دائمة، حيث أن الشعر المزروع مقاوم للتساقط." },
+        { q: "متى سأتمكن من رؤية النتائج النهائية؟", a: "تظهر النتائج الأولية بعد 3-4 أشهر، بينما يمكن تقدير النتيجة النهائية بعد 12-15 شهرًا." },
+        { q: "كم يومًا أحتاج للبقاء في تيرانا؟", a: "عادة ما تكون الإقامة لمدة 3 أيام وليلتين كافية لإكمال الإجراء بالكامل والرعاية الأولى بعد العملية." }
+      ]
+    }
   },
   tr: {
     tagline: "Güven, Doğal Olarak Geri Geldi",
@@ -464,7 +490,7 @@ export const translations: Record<string, any> = {
     },
     hero: {
       badge: "Uluslararası Saç Ekimi Uzmanları",
-      headline: "Glow Hair Center ile Güveninizi Yeniden Keşfedin",
+      headline: "Arnavutluk'ta Saç Ekimi: Mükemmellik ve Doğal Sonuçlar",
       subheadline: "Arnavutluk merkezli uluslararası saç ekimi ekibi",
       description: "Avrupa, Orta Doğu ve ABD'den müşteriler tarafından güveniliyor. Doğal, garanti edilmiş sonuçlarla dünya standartlarında saç restorasyonu deneyimleyin.",
       cta: {
@@ -676,6 +702,19 @@ export const translations: Record<string, any> = {
       terms: "Hizmet Şartları",
       cookies: "Çerez Politikası",
     },
+    altTexts: {
+      beforeAfter: "Tiran'da FUE saç ekimi öncesi ve sonrası sonuçları",
+      clinic: "Tiran'da saç ekimi kliniği"
+    },
+    faq: {
+      title: "Sıkça Sorulan Sorular",
+      questions: [
+        { q: "Saç ekimi acı verici midir?", a: "Hayır, lokal anestezi sayesinde işlem sırasında herhangi bir acı hissetmezsiniz." },
+        { q: "Ekim sonuçları ne kadar sürer?", a: "Ekilen saçlar dökülmeye karşı dirençli olduğundan sonuçlar kalıcıdır." },
+        { q: "Nihai sonuçları ne zaman görebileceğim?", a: "İlk sonuçlar 3-4 ay sonra görülmeye başlar, nihai sonuç ise 12-15 ay sonra tam olarak anlaşılır." },
+        { q: "Tiran'da kaç gün kalmam gerekiyor?", a: "Tüm prosedürü ve ilk operasyon sonrası bakımı tamamlamak için genellikle 3 gün 2 gece kalmak yeterlidir." }
+      ]
+    }
   },
   it: {
     tagline: "Fiducia Ripristinata, Naturalmente",
@@ -690,7 +729,7 @@ export const translations: Record<string, any> = {
     },
     hero: {
       badge: "Esperti Internazionali di Trapianto Capelli",
-      headline: "Riscopri la Tua Fiducia con Glow Hair Center",
+      headline: "Trapianto di Capelli in Albania: Eccellenza e Risultati Naturali",
       subheadline: "Team internazionale di trapianto capelli con sede in Albania",
       description: "Affidato da clienti provenienti da Europa, Medio Oriente e USA. Sperimenta il restauro capelli di livello mondiale con risultati naturali e garantiti.",
       cta: {
@@ -902,5 +941,18 @@ export const translations: Record<string, any> = {
       terms: "Termini di Servizio",
       cookies: "Politica sui Cookie",
     },
+    altTexts: {
+      beforeAfter: "Risultati trapianto capelli FUE prima e dopo a Tirana",
+      clinic: "Clinica per il trapianto di capelli a Tirana"
+    },
+    faq: {
+      title: "Domande Frequenti",
+      questions: [
+        { q: "Il trapianto di capelli è doloroso?", a: "No, la procedura viene eseguita in anestesia locale, quindi non sentirai alcun dolore durante l'intervento." },
+        { q: "Quanto durano i risultati?", a: "I risultati del trapianto di capelli sono permanenti poiché i capelli trapiantati sono resistenti alla caduta." },
+        { q: "Quando potrò vedere i risultati finali?", a: "I primi risultati sono visibili dopo 3-4 mesi, mentre il risultato finale si apprezza dopo 12-15 mesi." },
+        { q: "Quanti giorni devo rimanere in Albania?", a: "Di solito raccomandiamo un soggiorno di 3 giorni per completare la procedura e il controllo post-operatorio." }
+      ]
+    }
   },
 };

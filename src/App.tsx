@@ -23,11 +23,27 @@ function MainApp() {
 
   const t = translations[lang] || translations['it'];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": t.faq?.questions?.map((q: any) => ({
+      "@type": "Question",
+      "name": q.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": q.a
+      }
+    })) || []
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
         <html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'} />
         <title>Glow Hair Center {t.tagline ? `- ${t.tagline}` : ''}</title>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
       </Helmet>
       <Header language={lang} />
       <Hero language={lang} />

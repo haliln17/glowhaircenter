@@ -63,26 +63,22 @@ export default function Gallery({ language }: GalleryProps) {
                 <div className="absolute -top-4 -left-4 bg-red-500 text-white px-4 py-2 rounded-full font-semibold text-sm shadow-lg z-10">
                   {t.gallery.before}
                 </div>
-                <div
-                  className="h-80 rounded-2xl bg-cover shadow-xl"
-                  style={{ 
-                    backgroundImage: `url('${current.before}')`,
-                    backgroundPosition: 'center 20%'
-                  }}
-                ></div>
+                <img
+                  src={current.before}
+                  alt={t.altTexts?.beforeAfter || "Before hair transplant"}
+                  className="h-80 w-full object-cover object-[center_20%] rounded-2xl shadow-xl"
+                />
               </div>
 
               <div className="relative">
                 <div className="absolute -top-4 -left-4 bg-green-500 text-white px-4 py-2 rounded-full font-semibold text-sm shadow-lg z-10">
                   {t.gallery.after}
                 </div>
-                <div
-                  className="h-80 rounded-2xl bg-cover shadow-xl"
-                  style={{ 
-                    backgroundImage: `url('${current.after}')`,
-                    backgroundPosition: 'center 20%'
-                  }}
-                ></div>
+                <img
+                  src={current.after}
+                  alt={t.altTexts?.beforeAfter || "After hair transplant"}
+                  className="h-80 w-full object-cover object-[center_20%] rounded-2xl shadow-xl"
+                />
               </div>
             </div>
 
@@ -145,24 +141,27 @@ export default function Gallery({ language }: GalleryProps) {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="relative h-72 md:h-96 rounded-3xl overflow-hidden shadow-xl group">
-              <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                style={{ backgroundImage: "url('/images/process/process-2.jpeg')" }}
-              ></div>
+              <img
+                src="/images/process/process-2.jpeg"
+                alt={t.altTexts?.clinic || "Clinic Procedure"}
+                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
             <div className="relative h-72 md:h-96 rounded-3xl overflow-hidden shadow-xl group">
-              <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                style={{ backgroundImage: "url('/images/process/process-1.jpeg')" }}
-              ></div>
+              <img
+                src="/images/process/process-1.jpeg"
+                alt={t.altTexts?.clinic || "Clinic Procedure"}
+                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
             <div className="relative h-72 md:h-96 rounded-3xl overflow-hidden shadow-xl group">
-              <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                style={{ backgroundImage: "url('/images/process/process-3.jpeg')" }}
-              ></div>
+              <img
+                src="/images/process/process-3.jpeg"
+                alt={t.altTexts?.clinic || "Clinic Procedure"}
+                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
           </div>

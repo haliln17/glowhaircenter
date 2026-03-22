@@ -53,18 +53,16 @@ export default function About({ language }: AboutProps) {
 
           <div className="relative">
             <div className="grid grid-cols-2 gap-6">
-              <div
-                className="h-64 rounded-2xl bg-cover bg-[center_20%] shadow-xl transform hover:scale-105 transition-transform duration-300"
-                style={{
-                  backgroundImage: "url('https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=800')",
-                }}
-              ></div>
-              <div
-                className="h-64 rounded-2xl bg-cover bg-[center_20%] shadow-xl transform hover:scale-105 transition-transform duration-300 mt-12"
-                style={{
-                  backgroundImage: "url('https://images.pexels.com/photos/5327580/pexels-photo-5327580.jpeg?auto=compress&cs=tinysrgb&w=800')",
-                }}
-              ></div>
+              <img
+                src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt={t.altTexts?.clinic || "Clinic"}
+                className="h-64 w-full object-cover object-[center_20%] rounded-2xl shadow-xl transform hover:scale-105 transition-transform duration-300"
+              />
+              <img
+                src="https://images.pexels.com/photos/5327580/pexels-photo-5327580.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt={t.altTexts?.clinic || "Clinic"}
+                className="h-64 w-full object-cover object-[center_20%] rounded-2xl shadow-xl transform hover:scale-105 transition-transform duration-300 mt-12"
+              />
             </div>
             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full opacity-20 blur-3xl"></div>
           </div>
