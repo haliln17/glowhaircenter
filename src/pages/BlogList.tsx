@@ -21,36 +21,27 @@ export default function BlogList({ language }: { language: string }) {
           <div className="w-24 h-1 bg-gradient-to-r from-teal-500 to-teal-600 mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((post) => (
             <Link
               key={post.id}
               to={`/${language}/blog/${post.slug}`}
-              className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group flex flex-col h-full"
+              className="bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-lg hover:border-teal-200 transition-all duration-300 p-8 flex flex-col h-full group"
             >
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src={post.imageUrl}
-                  alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-slate-700">
-                  {new Date(post.date).toLocaleDateString(language)}
-                </div>
+              <div className="text-sm font-semibold text-teal-600 mb-4">
+                {new Date(post.date).toLocaleDateString(language, { year: 'numeric', month: 'long', day: 'numeric' })}
               </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h2 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors line-clamp-2">
-                  {post.title}
-                </h2>
-                <p className="text-slate-600 mb-6 flex-grow line-clamp-3">
-                  {post.excerpt}
-                </p>
-                <div className="inline-flex items-center text-teal-600 font-medium mt-auto group-hover:translate-x-2 transition-transform duration-300">
-                  Read More
-                  <svg className="w-5 h-5 ml-2 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </div>
+              <h2 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-teal-700 transition-colors line-clamp-2">
+                {post.title}
+              </h2>
+              <p className="text-slate-600 flex-grow line-clamp-3 mb-6 leading-relaxed text-md">
+                {post.excerpt}
+              </p>
+              <div className="inline-flex items-center text-teal-600 font-medium mt-auto group-hover:translate-x-1 transition-transform duration-300">
+                Read More
+                <svg className="w-5 h-5 ml-2 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
               </div>
             </Link>
           ))}

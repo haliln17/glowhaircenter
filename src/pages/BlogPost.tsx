@@ -16,32 +16,24 @@ export default function BlogPost({ language }: { language: string }) {
   }
 
   return (
-    <div className="pt-24 pb-16 min-h-screen bg-slate-50">
+    <div className="pt-24 pb-16 min-h-screen bg-white">
       <Helmet>
         <title>{post.title} - Glow Hair Center</title>
         <meta name="description" content={post.excerpt} />
       </Helmet>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-8 lg:px-12">
+      <div className="max-w-3xl mx-auto px-4 sm:px-8 lg:px-12">
         <Link 
           to={`/${language}/blog`}
-          className="inline-flex items-center text-slate-600 hover:text-teal-600 mb-8 transition-colors group"
+          className="inline-flex items-center text-slate-600 hover:text-teal-600 mb-10 text-sm font-medium transition-colors group"
         >
-          <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform rtl:rotate-180 rtl:ml-2 rtl:mr-0 rtl:group-hover:translate-x-1" />
+          <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform rtl:rotate-180 rtl:ml-2 rtl:mr-0 rtl:group-hover:translate-x-1" />
           <span>{t.nav.blog || 'Blog'}</span>
         </Link>
 
-        <article className="bg-white rounded-3xl shadow-sm overflow-hidden border border-slate-100">
-          <div className="relative h-64 md:h-[400px] w-full">
-            <img 
-              src={post.imageUrl} 
-              alt={post.title} 
-              className="w-full h-full object-cover"
-            />
-          </div>
-          
-          <div className="p-8 md:p-12">
-            <div className="flex items-center text-slate-500 text-sm mb-6">
+        <article>
+          <div className="mb-10 text-center">
+            <div className="text-teal-600 font-semibold mb-4 text-sm tracking-wide">
               <time dateTime={post.date}>
                 {new Date(post.date).toLocaleDateString(language, { 
                   year: 'numeric', 
@@ -49,19 +41,17 @@ export default function BlogPost({ language }: { language: string }) {
                   day: 'numeric' 
                 })}
               </time>
-              <span className="mx-3">•</span>
-              <span className="text-teal-600 font-medium">Glow Hair Center</span>
             </div>
-
-            <h1 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-5xl font-extrabold text-slate-900 leading-tight mb-8">
               {post.title}
             </h1>
-
-            <div 
-              className="prose prose-lg prose-slate max-w-none prose-headings:text-slate-900 prose-a:text-teal-600 hover:prose-a:text-teal-700 prose-img:rounded-2xl"
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
+            <div className="w-16 h-1 bg-gradient-to-r from-teal-500 to-teal-600 mx-auto rounded-full"></div>
           </div>
+          
+          <div 
+            className="prose prose-lg md:prose-xl prose-slate max-w-none prose-headings:text-slate-900 prose-headings:font-bold prose-a:text-teal-600 hover:prose-a:text-teal-700 prose-p:leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
         </article>
       </div>
     </div>
