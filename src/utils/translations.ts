@@ -9,6 +9,7 @@ export const translations: Record<string, any> = {
       testimonials: "Testimonials",
       contact: "Contact",
       bookConsultation: "Book Consultation",
+      blog: "Blog",
     },
     hero: {
       badge: "International Hair Transplant Experts",
@@ -248,6 +249,7 @@ export const translations: Record<string, any> = {
       testimonials: "الآراء",
       contact: "اتصل بنا",
       bookConsultation: "احجز استشارة",
+      blog: "المدونة",
     },
     hero: {
       badge: "خبراء زراعة الشعر العالميون",
@@ -487,6 +489,7 @@ export const translations: Record<string, any> = {
       testimonials: "Yorumlar",
       contact: "İletişim",
       bookConsultation: "Randevu Al",
+      blog: "Blog",
     },
     hero: {
       badge: "Uluslararası Saç Ekimi Uzmanları",
@@ -726,6 +729,7 @@ export const translations: Record<string, any> = {
       testimonials: "Testimonianze",
       contact: "Contatti",
       bookConsultation: "Prenota Consulto",
+      blog: "Blog",
     },
     hero: {
       badge: "Esperti Internazionali di Trapianto Capelli",

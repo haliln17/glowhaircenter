@@ -22,6 +22,19 @@ export default function Header({ language }: HeaderProps) {
   }, []);
 
   const scrollToSection = (id: string) => {
+    const isHomePage = window.location.pathname === `/${language}/` || window.location.pathname === `/${language}`;
+    if (!isHomePage) {
+      navigate(`/${language}/`);
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 300);
+      setIsMenuOpen(false);
+      return;
+    }
+
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -102,6 +115,9 @@ export default function Header({ language }: HeaderProps) {
               <button onClick={() => scrollToSection('testimonials')} className="text-slate-700 hover:text-teal-600 font-medium transition-colors">
                 {t.nav.testimonials}
               </button>
+              <button onClick={() => navigate(`/${language}/blog`)} className="text-slate-700 hover:text-teal-600 font-medium transition-colors">
+                {t.nav.blog}
+              </button>
               <button onClick={() => scrollToSection('contact')} className="text-slate-700 hover:text-teal-600 font-medium transition-colors">
                 {t.nav.contact}
               </button>
@@ -139,6 +155,9 @@ export default function Header({ language }: HeaderProps) {
               </button>
               <button onClick={() => scrollToSection('testimonials')} className="block w-full text-left px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg font-medium transition-colors">
                 {t.nav.testimonials}
+              </button>
+              <button onClick={() => { setIsMenuOpen(false); navigate(`/${language}/blog`); }} className="block w-full text-left px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg font-medium transition-colors">
+                {t.nav.blog}
               </button>
               <button onClick={() => scrollToSection('contact')} className="block w-full text-left px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg font-medium transition-colors">
                 {t.nav.contact}

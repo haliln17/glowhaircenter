@@ -11,16 +11,38 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import { translations } from './utils/translations';
+import BlogList from './pages/BlogList';
+import BlogPost from './pages/BlogPost';
 
 const SUPPORTED_LANGUAGES = ['it', 'en', 'ar', 'tr'];
 
-function MainApp() {
+function MainLayout({ children }: { children: React.ReactNode }) {
   const { lang } = useParams();
 
   if (!lang || !SUPPORTED_LANGUAGES.includes(lang)) {
     return <Navigate to="/it/" replace />;
   }
 
+  const t = translations[lang] || translations['it'];
+
+  return (
+    <div className="min-h-screen bg-white flex flex-col">
+      <Helmet>
+        <html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'} />
+        <title>Glow Hair Center {t.tagline ? `- ${t.tagline}` : ''}</title>
+      </Helmet>
+      <Header language={lang} />
+      <main className="flex-grow">
+        {children}
+      </main>
+      <Footer language={lang} />
+      <WhatsAppButton />
+    </div>
+  );
+}
+
+function MainApp() {
+  const { lang = 'it' } = useParams();
   const t = translations[lang] || translations['it'];
 
   const faqSchema = {
@@ -37,15 +59,12 @@ function MainApp() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <Helmet>
-        <html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'} />
-        <title>Glow Hair Center {t.tagline ? `- ${t.tagline}` : ''}</title>
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
         </script>
       </Helmet>
-      <Header language={lang} />
       <Hero language={lang} />
       <About language={lang} />
       <Services language={lang} />
@@ -53,16 +72,26 @@ function MainApp() {
       <WhyChooseUs language={lang} />
       <Testimonials language={lang} />
       <Contact language={lang} />
-      <Footer language={lang} />
-      <WhatsAppButton />
-    </div>
+    </>
   );
+}
+
+function BlogListWrapper() {
+  const { lang = 'it' } = useParams();
+  return <BlogList language={lang} />;
+}
+
+function BlogPostWrapper() {
+  const { lang = 'it' } = useParams();
+  return <BlogPost language={lang} />;
 }
 
 function App() {
   return (
     <Routes>
-      <Route path="/:lang/*" element={<MainApp />} />
+      <Route path="/:lang" element={<MainLayout><MainApp /></MainLayout>} />
+      <Route path="/:lang/blog" element={<MainLayout><BlogListWrapper /></MainLayout>} />
+      <Route path="/:lang/blog/:slug" element={<MainLayout><BlogPostWrapper /></MainLayout>} />
       <Route path="*" element={<Navigate to="/it/" replace />} />
     </Routes>
   );
