@@ -1,35 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://glowhaircenter.com/it/</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://glowhaircenter.com/en/</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://glowhaircenter.com/ar/</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://glowhaircenter.com/tr/</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://glowhaircenter.com/it/blog</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://glowhaircenter.com/en/blog</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://glowhaircenter.com/tr/blog</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://glowhaircenter.com/ar/blog</loc>
-    <priority>0.8</priority>
-  </url>
+  <!-- Roots -->
+  <url><loc>https://glowhaircenter.com/it/</loc><priority>1.0</priority></url>
+  <url><loc>https://glowhaircenter.com/en/</loc><priority>1.0</priority></url>
+  <url><loc>https://glowhaircenter.com/ar/</loc><priority>1.0</priority></url>
+  <url><loc>https://glowhaircenter.com/tr/</loc><priority>1.0</priority></url>
+
+  <!-- IT Pages -->
+  <url><loc>https://glowhaircenter.com/it/about</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/it/contact</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/it/services</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/it/gallery</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/it/testimonials</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/it/hair-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/it/dhi-hair-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/it/sapphire-hair-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/it/beard-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/it/womens-hair-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/it/prp-treatment</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/it/blog</loc><priority>0.8</priority></url>
+
+  <!-- EN Pages -->
+  <url><loc>https://glowhaircenter.com/en/about</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/en/contact</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/en/services</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/en/gallery</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/en/testimonials</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/en/hair-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/en/dhi-hair-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/en/sapphire-hair-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/en/beard-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/en/womens-hair-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/en/prp-treatment</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/en/blog</loc><priority>0.8</priority></url>
+
+  <!-- AR Pages -->
+  <url><loc>https://glowhaircenter.com/ar/about</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/ar/contact</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/ar/services</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/ar/gallery</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/ar/testimonials</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/ar/hair-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/ar/dhi-hair-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/ar/sapphire-hair-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/ar/beard-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/ar/womens-hair-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/ar/prp-treatment</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/ar/blog</loc><priority>0.8</priority></url>
+
+  <!-- TR Pages -->
+  <url><loc>https://glowhaircenter.com/tr/about</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/tr/contact</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/tr/services</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/tr/gallery</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/tr/testimonials</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/tr/hair-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/tr/dhi-hair-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/tr/sapphire-hair-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/tr/beard-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/tr/womens-hair-transplant</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/tr/prp-treatment</loc><priority>0.8</priority></url>
+  <url><loc>https://glowhaircenter.com/tr/blog</loc><priority>0.8</priority></url>
+
+  <!-- HTML Static Additions -->
+  <url><loc>https://glowhaircenter.com/sac-ekimi.html</loc><priority>0.9</priority></url>
+  <url><loc>https://glowhaircenter.com/dhi-sac-ekimi.html</loc><priority>0.9</priority></url>
+  <url><loc>https://glowhaircenter.com/safir-fue-sac-ekimi.html</loc><priority>0.9</priority></url>
+  <url><loc>https://glowhaircenter.com/sakal-ekimi.html</loc><priority>0.9</priority></url>
+  <url><loc>https://glowhaircenter.com/kadin-sac-ekimi.html</loc><priority>0.9</priority></url>
+  <url><loc>https://glowhaircenter.com/prp-tedavisi.html</loc><priority>0.9</priority></url>
+  <url><loc>https://glowhaircenter.com/iletisim.html</loc><priority>0.9</priority></url>
+  <url><loc>https://glowhaircenter.com/hakkimizda.html</loc><priority>0.9</priority></url>
 </urlset>
