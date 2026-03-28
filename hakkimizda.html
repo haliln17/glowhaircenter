@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda | Glow Hair Center - Saç Restorasyon Kliniği</title>
+    <meta name="description" content="Tiran merkezli Glow Hair Center, uluslararası standartlarda uzman medikal kadrosuyla Türkiye ve Arnavutluk'un en güvenilir saç ekimi merkezi olarak hizmet veriyor.">
+    <link rel="canonical" href="https://glowhaircenter.com/hakkimizda.html" />
+    
+    <meta property="og:title" content="Glow Hair Center Kurumsal">
+    <meta property="og:description" content="Deneyimli cerrahlar ve kanıtlanmış saç ekimi prosedürlerimizle saç kaybında dünya standartlarında sonuçlar üretiyoruz. Bizi yakından tanıyın.">
+    <meta property="og:image" content="https://glowhaircenter.com/logo.png">
+    <meta property="og:url" content="https://glowhaircenter.com/hakkimizda.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <div id="header-placeholder"></div>
+
+    <main class="flex-grow pt-20 pb-20">
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-center text-slate-900 mb-6">
+                Biz Kimiz? | Glow Hair Center
+            </h1>
+            
+            <p class="text-xl text-slate-600 text-center max-w-3xl mx-auto leading-relaxed mb-12">
+               Glow Hair Center, Arnavutluk'un başkenti Tiran'da kurulan ve uluslararası uzmanlık sertifikasına sahip Avrupa'nın öncü saç ekim merkezlerinden biridir. Amacımız sadece dökülen saçlarınızı değil, aynı zamanda güveninizi de yerine getirmektir.
+            </p>
+            
+            <!-- Company Info & Story -->
+            <div class="grid md:grid-cols-2 gap-12 mt-12 bg-white p-8 rounded-3xl shadow-xl">
+                 <div class="rounded-xl overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&auto=format&fit=crop" alt="Saç Ekimi Uzmanları Glow Hair Center" class="w-full h-full object-cover rounded-xl">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">Uluslararası Uzmanlık, Sıcak İlgi</h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-4">
+                        Saç dökülmesinin kişinin özgüvenini ve sosyal hayatını nasıl etkilediğinin farkındayız. İşte tam da bu nedenle, gelişmiş FUE, DHI ve Safir tekniklerini şahsa münhasır "sıcak" bir hizmet kültürüyle sunuyoruz.
+                    </p>
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        Ekibimiz, Avrupa'nın önde gelen sağlık kuruluşlarında eğitimini tamamlamış doktorlar ve onlarca yıldır bu işle meşgul olan deneyimli cerrah asistanlarından oluşmaktadır. Kaliteyi bir ayrıcalık değil, bir standart olarak sunuyoruz.
+                    </p>
+                    
+                    <div class="mt-8 flex gap-4">
+                         <div class="bg-teal-50 px-6 py-4 rounded-xl border border-teal-100">
+                             <div class="text-3xl font-bold text-teal-600 mb-1">10+</div>
+                             <div class="text-sm font-semibold text-slate-700">Yıllık Uzmanlık</div>
+                         </div>
+                         <div class="bg-teal-50 px-6 py-4 rounded-xl border border-teal-100">
+                             <div class="text-3xl font-bold text-teal-600 mb-1">5000+</div>
+                             <div class="text-sm font-semibold text-slate-700">Mutlu Hasta</div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('/header.html').then(r => r.text()).then(html => document.getElementById('header-placeholder').innerHTML = html);
+            fetch('/footer.html').then(r => r.text()).then(html => document.getElementById('footer-placeholder').innerHTML = html);
+        });
+    </script>
+</body>
+</html>

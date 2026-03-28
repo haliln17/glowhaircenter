@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Youtube, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { useNavigate, Link } from 'react-router-dom';
 import { translations } from '../utils/translations';
 
 interface FooterProps {
@@ -6,15 +7,9 @@ interface FooterProps {
 }
 
 export default function Footer({ language }: FooterProps) {
-  const t = translations[language];
+  const t = translations[language] || translations['it'];
   const currentYear = new Date().getFullYear();
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
+  const navigate = useNavigate();
 
   return (
     <footer className="bg-gradient-to-br from-slate-900 to-slate-800 text-white">
@@ -71,27 +66,27 @@ export default function Footer({ language }: FooterProps) {
             <h4 className="text-lg font-bold mb-6">{t.footer.quickLinks.title}</h4>
             <ul className="space-y-3">
               <li>
-                <button onClick={() => scrollToSection('about')} className="text-slate-400 hover:text-teal-400 transition-colors">
+                <button onClick={() => navigate(`/${language}/about`)} className="text-slate-400 hover:text-teal-400 transition-colors">
                   {t.nav.about}
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('services')} className="text-slate-400 hover:text-teal-400 transition-colors">
+                <button onClick={() => navigate(`/${language}/services`)} className="text-slate-400 hover:text-teal-400 transition-colors">
                   {t.nav.services}
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('gallery')} className="text-slate-400 hover:text-teal-400 transition-colors">
+                <button onClick={() => navigate(`/${language}/gallery`)} className="text-slate-400 hover:text-teal-400 transition-colors">
                   {t.nav.gallery}
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('testimonials')} className="text-slate-400 hover:text-teal-400 transition-colors">
+                <button onClick={() => navigate(`/${language}/testimonials`)} className="text-slate-400 hover:text-teal-400 transition-colors">
                   {t.nav.testimonials}
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('contact')} className="text-slate-400 hover:text-teal-400 transition-colors">
+                <button onClick={() => navigate(`/${language}/contact`)} className="text-slate-400 hover:text-teal-400 transition-colors">
                   {t.nav.contact}
                 </button>
               </li>
@@ -100,11 +95,13 @@ export default function Footer({ language }: FooterProps) {
 
           <div>
             <h4 className="text-lg font-bold mb-6">{t.footer.services.title}</h4>
-            <ul className="space-y-3 text-slate-400">
-              <li>{t.services.items.hairTransplant.title}</li>
-              <li>{t.services.items.beardTransplant.title}</li>
-              <li>{t.services.items.prpStemCell.title}</li>
-              <li>{t.services.items.womensHair.title}</li>
+            <ul className="space-y-3 flex flex-col items-start">
+              <li><Link to={`/${language}/hair-transplant`} className="text-slate-400 hover:text-teal-400 transition-colors">{t.services.items.hairTransplant.title}</Link></li>
+              <li><Link to={`/${language}/beard-transplant`} className="text-slate-400 hover:text-teal-400 transition-colors">{t.services.items.beardTransplant.title}</Link></li>
+              <li><Link to={`/${language}/prp-treatment`} className="text-slate-400 hover:text-teal-400 transition-colors">{t.services.items.prpStemCell.title}</Link></li>
+              <li><Link to={`/${language}/womens-hair-transplant`} className="text-slate-400 hover:text-teal-400 transition-colors">{t.services.items.womensHair.title}</Link></li>
+              <li><Link to={`/${language}/dhi-hair-transplant`} className="text-slate-400 hover:text-teal-400 transition-colors">{language === 'tr' ? 'DHI Saç Ekimi' : language === 'en' ? 'DHI Hair Transplant' : language === 'it' ? 'Trapianto Capelli DHI' : 'زراعة الشعر بتقنية DHI'}</Link></li>
+              <li><Link to={`/${language}/sapphire-hair-transplant`} className="text-slate-400 hover:text-teal-400 transition-colors">{language === 'tr' ? 'Safir FUE Saç Ekimi' : language === 'en' ? 'Sapphire FUE Hair Transplant' : language === 'it' ? 'Trapianto Capelli FUE Zaffiro' : 'زراعة الشعر بتقنية السفير FUE'}</Link></li>
             </ul>
           </div>
 

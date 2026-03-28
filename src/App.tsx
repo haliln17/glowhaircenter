@@ -14,6 +14,19 @@ import { translations } from './utils/translations';
 import BlogList from './pages/BlogList';
 import BlogPost from './pages/BlogPost';
 
+// New SEO Pages
+import HairTransplant from './pages/HairTransplant';
+import DhiHairTransplant from './pages/DhiHairTransplant';
+import SafirHairTransplant from './pages/SafirHairTransplant';
+import BeardTransplant from './pages/BeardTransplant';
+import WomensHair from './pages/WomensHair';
+import PrpTreatment from './pages/PrpTreatment';
+import ContactPage from './pages/ContactPage';
+import AboutPage from './pages/AboutPage';
+import ServicesPage from './pages/ServicesPage';
+import GalleryPage from './pages/GalleryPage';
+import TestimonialsPage from './pages/TestimonialsPage';
+
 const SUPPORTED_LANGUAGES = ['it', 'en', 'ar', 'tr'];
 
 function MainLayout({ children }: { children: React.ReactNode }) {
@@ -90,8 +103,23 @@ function App() {
   return (
     <Routes>
       <Route path="/:lang" element={<MainLayout><MainApp /></MainLayout>} />
+      
+      {/* Dynamic SEO Routes - Global English standard */}
+      <Route path="/:lang/hair-transplant" element={<MainLayout><HairTransplant /></MainLayout>} />
+      <Route path="/:lang/dhi-hair-transplant" element={<MainLayout><DhiHairTransplant /></MainLayout>} />
+      <Route path="/:lang/sapphire-hair-transplant" element={<MainLayout><SafirHairTransplant /></MainLayout>} />
+      <Route path="/:lang/beard-transplant" element={<MainLayout><BeardTransplant /></MainLayout>} />
+      <Route path="/:lang/womens-hair-transplant" element={<MainLayout><WomensHair /></MainLayout>} />
+      <Route path="/:lang/prp-treatment" element={<MainLayout><PrpTreatment /></MainLayout>} />
+      <Route path="/:lang/contact" element={<MainLayout><ContactPage /></MainLayout>} />
+      <Route path="/:lang/about" element={<MainLayout><AboutPage /></MainLayout>} />
+      <Route path="/:lang/services" element={<MainLayout><ServicesPage /></MainLayout>} />
+      <Route path="/:lang/gallery" element={<MainLayout><GalleryPage /></MainLayout>} />
+      <Route path="/:lang/testimonials" element={<MainLayout><TestimonialsPage /></MainLayout>} />
+
       <Route path="/:lang/blog" element={<MainLayout><BlogListWrapper /></MainLayout>} />
       <Route path="/:lang/blog/:slug" element={<MainLayout><BlogPostWrapper /></MainLayout>} />
+      
       <Route path="*" element={<Navigate to="/it/" replace />} />
     </Routes>
   );

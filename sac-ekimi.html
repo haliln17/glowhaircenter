@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Etiketleri -->
+    <title>Saç Ekimi Fiyatları ve En İyi Yöntemler | Glow Hair Center</title>
+    <meta name="description" content="Tiran, Arnavutluk'ta Glow Hair Center uzmanlarıyla doğal ve kalıcı saç ekimi sonuçlarına ulaşın. FUE, DHI ve Safir teknikleriyle garantili çözümler!">
+    <link rel="canonical" href="https://glowhaircenter.com/sac-ekimi.html" />
+    
+    <!-- Open Graph (Sosyal Medya Paylaşımı) -->
+    <meta property="og:title" content="Profesyonel Saç Ekimi ve Kalıcı Çözümler | Glow Hair Center">
+    <meta property="og:description" content="Uzman doktorlarımız ve uluslararası standartlardaki kliniğimizle saç dökülmesine karşı en etkili ve doğal saç ekimi teknikleri (FUE, DHI, Safir) sizleri bekliyor.">
+    <meta property="og:image" content="https://glowhaircenter.com/images/services/hairtrans.jpg">
+    <meta property="og:url" content="https://glowhaircenter.com/sac-ekimi.html">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind Play CDN (Mevcut statik yapıyı korumak ve test için) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* Ekstra resetler veya font ayarları */
+        body { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Dinamik Header Alanı -->
+    <div id="header-placeholder"></div>
+
+    <!-- SADECE İlgili Hizmet Bölümü (Sayfa İçeriği) -->
+    <main class="flex-grow pt-8 pb-20">
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+            
+            <div class="text-center mb-12">
+                <span class="text-teal-600 font-semibold text-sm tracking-wider uppercase mb-4 block">Hizmetlerimiz</span>
+                <!-- Güçlü SEO dostu H1 Başlığı -->
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 mb-6">
+                    Türkiye ve Arnavutluk'un En İyi Saç Ekimi Kliniği
+                </h1>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                    İleri saç ekimi (FUE, Sapphire, DHI) tekniklerimizle saç çizginizi ve yoğunluğunuzu kalıcı olarak geri kazanın.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mt-16">
+                <div class="rounded-3xl overflow-hidden shadow-2xl relative">
+                    <img src="/images/services/hairtrans.jpg" alt="Glow Hair Center Saç Ekimi Operasyonu Öncesi Sonrası" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-700">
+                </div>
+                
+                <div class="p-6">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">Neden Bizi Tercih Etmelisiniz?</h2>
+                    <ul class="space-y-4 text-slate-600 text-lg">
+                        <li class="flex items-start">
+                            <span class="text-teal-500 mr-3 text-2xl">✓</span>
+                            <span>Ağrısız ve yara izi bırakmayan son teknoloji FUE yöntemi.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-teal-500 mr-3 text-2xl">✓</span>
+                            <span>Doğal saç çıkış yönüyle birebir eşleşen Safir FUE tekniği.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-teal-500 mr-3 text-2xl">✓</span>
+                            <span>Uzman cerrahlar liderliğinde kalıcı saç restorasyon garantisi.</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-10">
+                        <a href="/iletisim.html" class="inline-block bg-teal-600 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-teal-700 hover:-translate-y-1 transition duration-300">
+                            Ücretsiz Saç Analizi Randevusu Alın
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Dinamik Footer Alanı -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Ortak Şablonları Yükleme Scripti -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Header Yükleme
+            fetch('header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('header-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Header yüklenirken hata oluştu:', error));
+
+            // Footer Yükleme
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('footer-placeholder').innerHTML = html;
+                })
+                .catch(error => console.error('Footer yüklenirken hata oluştu:', error));
+        });
+    </script>
+</body>
+</html>

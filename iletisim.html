@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim ve Ücretsiz Randevu | Glow Hair Center</title>
+    <meta name="description" content="Glow Hair Center uzmanlarına anında ulaşın. Ücretsiz ön muayene, online danışmanlık veya klinik randevunuzu hemen ayırtın!">
+    <link rel="canonical" href="https://glowhaircenter.com/iletisim.html" />
+    
+    <meta property="og:title" content="Glow Hair Center ile İletişime Geçin">
+    <meta property="og:description" content="Sorularınızı yanıtlamaktan veya hemen online bir saç analizi ayarlamaktan memnuniyet duyarız. Aradığınız dönüşümü bizimle başlatın.">
+    <meta property="og:image" content="https://glowhaircenter.com/logo.png">
+    <meta property="og:url" content="https://glowhaircenter.com/iletisim.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <div id="header-placeholder"></div>
+
+    <main class="flex-grow pt-20 pb-20">
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-center text-slate-900 mb-6">
+                Bizimle İletişime Geçin
+            </h1>
+            
+            <p class="text-xl text-slate-600 text-center max-w-3xl mx-auto leading-relaxed mb-12">
+               Ücretsiz danışmanlık ya da anlık saç analizi için bilgilerinizi veya fotoğraflarınızı WhatsApp üzerinden paylaşabilir, doğrudan arayabilir veya mesaj bırakabilirsiniz.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-12 mt-8">
+               <div class="bg-white p-8 rounded-3xl shadow-xl flex flex-col justify-center items-center text-center">
+                    <div class="w-16 h-16 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center mb-6 text-3xl">📞</div>
+                    <h3 class="text-2xl font-bold mb-4">Müşteri Hattı & WhatsApp</h3>
+                    <p class="text-lg text-slate-600 mb-4">+355 697 764 801</p>
+                    <a href="https://wa.me/355697764801" class="bg-teal-600 text-white px-6 py-2 rounded-full font-bold hover:bg-teal-700 transition">
+                        WhatsApp'tan Yazın
+                    </a>
+               </div>
+               
+               <div class="bg-white p-8 rounded-3xl shadow-xl flex flex-col justify-center items-center text-center">
+                    <div class="w-16 h-16 bg-teal-100 text-teal-600 rounded-full flex items-center justify-center mb-6 text-3xl">📧</div>
+                    <h3 class="text-2xl font-bold mb-4">E-Posta & Form</h3>
+                    <p class="text-lg text-slate-600 mb-4">glowhaircenter@gmail.com</p>
+                    <a href="mailto:glowhaircenter@gmail.com" class="border-2 border-teal-600 text-teal-600 px-6 py-2 rounded-full font-bold hover:bg-teal-50 transition">
+                        Bize Mail Atın
+                    </a>
+               </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('/header.html').then(r => r.text()).then(html => document.getElementById('header-placeholder').innerHTML = html);
+            fetch('/footer.html').then(r => r.text()).then(html => document.getElementById('footer-placeholder').innerHTML = html);
+        });
+    </script>
+</body>
+</html>

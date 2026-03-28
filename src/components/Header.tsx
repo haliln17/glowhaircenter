@@ -21,27 +21,6 @@ export default function Header({ language }: HeaderProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const isHomePage = window.location.pathname === `/${language}/` || window.location.pathname === `/${language}`;
-    if (!isHomePage) {
-      navigate(`/${language}/`);
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 300);
-      setIsMenuOpen(false);
-      return;
-    }
-
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setIsMenuOpen(false);
-    }
-  };
-
   const languages = [
     { code: 'en', label: 'English', flag: '🇬🇧' },
     { code: 'ar', label: 'العربية', flag: '🇸🇦' },
@@ -100,29 +79,29 @@ export default function Header({ language }: HeaderProps) {
             </div>
 
             <div className="hidden lg:flex items-center space-x-8">
-              <button onClick={() => scrollToSection('hero')} className="text-slate-700 hover:text-teal-600 font-medium transition-colors">
+              <button onClick={() => navigate(`/${language}/`)} className="text-slate-700 hover:text-teal-600 font-medium transition-colors">
                 {t.nav.home}
               </button>
-              <button onClick={() => scrollToSection('about')} className="text-slate-700 hover:text-teal-600 font-medium transition-colors">
+              <button onClick={() => navigate(`/${language}/about`)} className="text-slate-700 hover:text-teal-600 font-medium transition-colors">
                 {t.nav.about}
               </button>
-              <button onClick={() => scrollToSection('services')} className="text-slate-700 hover:text-teal-600 font-medium transition-colors">
+              <button onClick={() => navigate(`/${language}/services`)} className="text-slate-700 hover:text-teal-600 font-medium transition-colors">
                 {t.nav.services}
               </button>
-              <button onClick={() => scrollToSection('gallery')} className="text-slate-700 hover:text-teal-600 font-medium transition-colors">
+              <button onClick={() => navigate(`/${language}/gallery`)} className="text-slate-700 hover:text-teal-600 font-medium transition-colors">
                 {t.nav.gallery}
               </button>
-              <button onClick={() => scrollToSection('testimonials')} className="text-slate-700 hover:text-teal-600 font-medium transition-colors">
+              <button onClick={() => navigate(`/${language}/testimonials`)} className="text-slate-700 hover:text-teal-600 font-medium transition-colors">
                 {t.nav.testimonials}
               </button>
               <button onClick={() => navigate(`/${language}/blog`)} className="text-slate-700 hover:text-teal-600 font-medium transition-colors">
                 {t.nav.blog}
               </button>
-              <button onClick={() => scrollToSection('contact')} className="text-slate-700 hover:text-teal-600 font-medium transition-colors">
+              <button onClick={() => navigate(`/${language}/contact`)} className="text-slate-700 hover:text-teal-600 font-medium transition-colors">
                 {t.nav.contact}
               </button>
               <button
-                onClick={() => scrollToSection('contact')}
+                onClick={() => navigate(`/${language}/contact`)}
                 className="bg-gradient-to-r from-teal-500 to-teal-600 text-white px-6 py-2.5 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200"
               >
                 {t.nav.bookConsultation}
@@ -141,29 +120,29 @@ export default function Header({ language }: HeaderProps) {
         {isMenuOpen && (
           <div className="lg:hidden bg-white border-t border-slate-200 shadow-xl">
             <div className="px-4 py-6 space-y-4">
-              <button onClick={() => scrollToSection('hero')} className="block w-full text-left px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg font-medium transition-colors">
+              <button onClick={() => { setIsMenuOpen(false); navigate(`/${language}/`); }} className="block w-full text-left px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg font-medium transition-colors">
                 {t.nav.home}
               </button>
-              <button onClick={() => scrollToSection('about')} className="block w-full text-left px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg font-medium transition-colors">
+              <button onClick={() => { setIsMenuOpen(false); navigate(`/${language}/about`); }} className="block w-full text-left px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg font-medium transition-colors">
                 {t.nav.about}
               </button>
-              <button onClick={() => scrollToSection('services')} className="block w-full text-left px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg font-medium transition-colors">
+              <button onClick={() => { setIsMenuOpen(false); navigate(`/${language}/services`); }} className="block w-full text-left px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg font-medium transition-colors">
                 {t.nav.services}
               </button>
-              <button onClick={() => scrollToSection('gallery')} className="block w-full text-left px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg font-medium transition-colors">
+              <button onClick={() => { setIsMenuOpen(false); navigate(`/${language}/gallery`); }} className="block w-full text-left px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg font-medium transition-colors">
                 {t.nav.gallery}
               </button>
-              <button onClick={() => scrollToSection('testimonials')} className="block w-full text-left px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg font-medium transition-colors">
+              <button onClick={() => { setIsMenuOpen(false); navigate(`/${language}/testimonials`); }} className="block w-full text-left px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg font-medium transition-colors">
                 {t.nav.testimonials}
               </button>
               <button onClick={() => { setIsMenuOpen(false); navigate(`/${language}/blog`); }} className="block w-full text-left px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg font-medium transition-colors">
                 {t.nav.blog}
               </button>
-              <button onClick={() => scrollToSection('contact')} className="block w-full text-left px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg font-medium transition-colors">
+              <button onClick={() => { setIsMenuOpen(false); navigate(`/${language}/contact`); }} className="block w-full text-left px-4 py-2 text-slate-700 hover:bg-teal-50 hover:text-teal-600 rounded-lg font-medium transition-colors">
                 {t.nav.contact}
               </button>
               <button
-                onClick={() => scrollToSection('contact')}
+                onClick={() => { setIsMenuOpen(false); navigate(`/${language}/contact`); }}
                 className="w-full bg-gradient-to-r from-teal-500 to-teal-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all"
               >
                 {t.nav.bookConsultation}
