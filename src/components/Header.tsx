@@ -70,7 +70,7 @@ export default function Header({ language }: HeaderProps) {
         <nav className="max-w-full mx-auto px-4 sm:px-8 lg:px-12">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-3">
-              <img src="/logoyeni.png" alt="Glow Hair Center Logo" width="99" height="84" className="h-12 w-auto object-contain" />
+              <img src="/logoyeni.webp" alt="Glow Hair Center Logo" width="99" height="84" className="h-12 w-auto object-contain" />
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
                   Glow Hair Center

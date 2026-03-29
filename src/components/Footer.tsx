@@ -17,7 +17,7 @@ export default function Footer({ language }: FooterProps) {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <img src="/logoyeni.png" alt="Glow Hair Center Logo" width="99" height="84" className="h-12 w-auto object-contain" />
+              <img src="/logoyeni.webp" alt="Glow Hair Center Logo" width="99" height="84" className="h-12 w-auto object-contain" />
               <div>
                 <h3 className="text-xl font-bold">Glow Hair Center</h3>
                 <p className="text-xs text-slate-400">{t.tagline}</p>
