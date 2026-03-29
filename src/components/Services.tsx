@@ -15,7 +15,7 @@ export default function Services({ language }: ServicesProps) {
       title: t.services.items.hairTransplant.title,
       description: t.services.items.hairTransplant.description,
       techniques: t.services.items.hairTransplant.techniques,
-      image: '/images/services/hairtrans.jpg',
+      image: '/images/services/hairtrans.webp',
       link: `/${language}/hair-transplant`,
     },
     {
@@ -23,7 +23,7 @@ export default function Services({ language }: ServicesProps) {
       title: t.services.items.beardTransplant.title,
       description: t.services.items.beardTransplant.description,
       techniques: t.services.items.beardTransplant.techniques,
-      image: '/images/services/beard.jpg',
+      image: '/images/services/beard.webp',
       link: `/${language}/beard-transplant`,
     },
     {
@@ -31,7 +31,7 @@ export default function Services({ language }: ServicesProps) {
       title: t.services.items.prpStemCell.title,
       description: t.services.items.prpStemCell.description,
       techniques: t.services.items.prpStemCell.techniques,
-      image: '/images/services/prp.jpg',
+      image: '/images/services/prp.webp',
       link: `/${language}/prp-treatment`,
     },
     {
@@ -39,7 +39,7 @@ export default function Services({ language }: ServicesProps) {
       title: t.services.items.womensHair.title,
       description: t.services.items.womensHair.description,
       techniques: t.services.items.womensHair.techniques,
-      image: '/images/services/women.png',
+      image: '/images/services/women.webp',
       link: `/${language}/womens-hair-transplant`,
     },
   ];
@@ -49,7 +49,7 @@ export default function Services({ language }: ServicesProps) {
       <div className="max-w-full mx-auto px-4 sm:px-8 lg:px-12">
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <span className="text-teal-600 font-semibold text-sm tracking-wider uppercase">
+            <span className="text-teal-700 font-semibold text-sm tracking-wider uppercase">
               {t.services.badge}
             </span>
           </div>

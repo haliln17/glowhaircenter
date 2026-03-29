@@ -17,7 +17,7 @@ export default function Footer({ language }: FooterProps) {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <img src="/logo.png" alt="Glow Hair Center Logo" className="h-12 w-auto object-contain" />
+              <img src="/logoyeni.png" alt="Glow Hair Center Logo" width="99" height="84" className="h-12 w-auto object-contain" />
               <div>
                 <h3 className="text-xl font-bold">Glow Hair Center</h3>
                 <p className="text-xs text-slate-400">{t.tagline}</p>
@@ -31,6 +31,7 @@ export default function Footer({ language }: FooterProps) {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-teal-500 transition-colors"
               >
                 <Facebook size={20} />
@@ -39,6 +40,7 @@ export default function Footer({ language }: FooterProps) {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-teal-500 transition-colors"
               >
                 <Instagram size={20} />
@@ -47,6 +49,7 @@ export default function Footer({ language }: FooterProps) {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="YouTube"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-teal-500 transition-colors"
               >
                 <Youtube size={20} />
@@ -55,6 +58,7 @@ export default function Footer({ language }: FooterProps) {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-teal-500 transition-colors"
               >
                 <Linkedin size={20} />

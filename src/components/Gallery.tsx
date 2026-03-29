@@ -12,16 +12,16 @@ export default function Gallery({ language }: GalleryProps) {
 
   const transformations = [
     {
-      before: '/images/transformations/pair_1_before.jpeg',
-      after: '/images/transformations/pair_1_after.jpeg',
+      before: '/images/transformations/pair_1_before.webp',
+      after: '/images/transformations/pair_1_after.webp',
       name: 'David M.',
       country: 'USA',
       flag: '🇺🇸',
       testimonial: t.gallery.transformations[0]?.testimonial || 'Amazing results! The team was professional and caring throughout the entire process.',
     },
     {
-      before: '/images/transformations/pair_2_before.jpeg',
-      after: '/images/transformations/pair_2_after.jpeg',
+      before: '/images/transformations/pair_2_before.webp',
+      after: '/images/transformations/pair_2_after.webp',
       name: 'Ahmed K.',
       country: 'UAE',
       flag: '🇦🇪',
@@ -44,7 +44,7 @@ export default function Gallery({ language }: GalleryProps) {
       <div className="max-w-full mx-auto px-4 sm:px-8 lg:px-12">
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
-            <span className="text-teal-600 font-semibold text-sm tracking-wider uppercase">
+            <span className="text-teal-700 font-semibold text-sm tracking-wider uppercase">
               {t.gallery.badge}
             </span>
           </div>
@@ -60,7 +60,7 @@ export default function Gallery({ language }: GalleryProps) {
           <div className="bg-gradient-to-br from-slate-50 to-white rounded-3xl shadow-2xl p-8 md:p-12">
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="relative">
-                <div className="absolute -top-4 -left-4 bg-red-500 text-white px-4 py-2 rounded-full font-semibold text-sm shadow-lg z-10">
+                <div className="absolute -top-4 -left-4 bg-red-600 text-white px-4 py-2 rounded-full font-semibold text-sm shadow-lg z-10">
                   {t.gallery.before}
                 </div>
                 <img
@@ -71,7 +71,7 @@ export default function Gallery({ language }: GalleryProps) {
               </div>
 
               <div className="relative">
-                <div className="absolute -top-4 -left-4 bg-green-500 text-white px-4 py-2 rounded-full font-semibold text-sm shadow-lg z-10">
+                <div className="absolute -top-4 -left-4 bg-green-700 text-white px-4 py-2 rounded-full font-semibold text-sm shadow-lg z-10">
                   {t.gallery.after}
                 </div>
                 <img
@@ -103,6 +103,7 @@ export default function Gallery({ language }: GalleryProps) {
 
           <button
             onClick={prev}
+            aria-label="Previous image"
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white rounded-full shadow-xl hover:bg-teal-50 transition-colors flex items-center justify-center group"
           >
             <ChevronLeft className="text-slate-700 group-hover:text-teal-600" size={24} />
@@ -110,6 +111,7 @@ export default function Gallery({ language }: GalleryProps) {
 
           <button
             onClick={next}
+            aria-label="Next image"
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-white rounded-full shadow-xl hover:bg-teal-50 transition-colors flex items-center justify-center group"
           >
             <ChevronRight className="text-slate-700 group-hover:text-teal-600" size={24} />
@@ -120,6 +122,7 @@ export default function Gallery({ language }: GalleryProps) {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
+                aria-label={`Go to image ${index + 1}`}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex ? 'bg-teal-600 w-8' : 'bg-slate-300 hover:bg-slate-400'
                 }`}
@@ -142,7 +145,7 @@ export default function Gallery({ language }: GalleryProps) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="relative h-72 md:h-96 rounded-3xl overflow-hidden shadow-xl group">
               <img
-                src="/images/process/process-2.jpeg"
+                src="/images/process/process-2.webp"
                 alt={t.altTexts?.clinic || "Clinic Procedure"}
                 className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
               />
@@ -150,7 +153,7 @@ export default function Gallery({ language }: GalleryProps) {
             </div>
             <div className="relative h-72 md:h-96 rounded-3xl overflow-hidden shadow-xl group">
               <img
-                src="/images/process/process-1.jpeg"
+                src="/images/process/process-1.webp"
                 alt={t.altTexts?.clinic || "Clinic Procedure"}
                 className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
               />
@@ -158,7 +161,7 @@ export default function Gallery({ language }: GalleryProps) {
             </div>
             <div className="relative h-72 md:h-96 rounded-3xl overflow-hidden shadow-xl group">
               <img
-                src="/images/process/process-3.jpeg"
+                src="/images/process/process-3.webp"
                 alt={t.altTexts?.clinic || "Clinic Procedure"}
                 className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
               />

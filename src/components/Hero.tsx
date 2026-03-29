@@ -22,12 +22,13 @@ export default function Hero({ language }: HeroProps) {
   return (
     <section id="hero" className="relative min-h-screen flex items-center">
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-slate-900/95 z-10"></div>
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg?auto=compress&cs=tinysrgb&w=1920')",
-        }}
-      ></div>
+      <img
+        src="https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        alt="Glow Hair Center Hero"
+        fetchPriority="high"
+        loading="eager"
+        className="absolute inset-0 w-full h-full object-cover object-center z-0"
+      />
 
       <div className="relative z-20 max-w-full mx-auto px-4 sm:px-8 lg:px-12 py-32">
         <div className="max-w-3xl">

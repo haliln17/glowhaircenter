@@ -37,7 +37,7 @@ export default function About({ language }: AboutProps) {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <div className="inline-block mb-4">
-              <span className="text-teal-600 font-semibold text-sm tracking-wider uppercase">
+              <span className="text-teal-700 font-semibold text-sm tracking-wider uppercase">
                 {t.about.badge}
               </span>
             </div>
@@ -56,11 +56,15 @@ export default function About({ language }: AboutProps) {
               <img
                 src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt={t.altTexts?.clinic || "Clinic"}
+                width="800"
+                height="1150"
                 className="h-64 w-full object-cover object-[center_20%] rounded-2xl shadow-xl transform hover:scale-105 transition-transform duration-300"
               />
               <img
                 src="https://images.pexels.com/photos/5327580/pexels-photo-5327580.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt={t.altTexts?.clinic || "Clinic"}
+                width="800"
+                height="1151"
                 className="h-64 w-full object-cover object-[center_20%] rounded-2xl shadow-xl transform hover:scale-105 transition-transform duration-300 mt-12"
               />
             </div>

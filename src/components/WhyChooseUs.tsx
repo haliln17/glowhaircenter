@@ -87,16 +87,16 @@ export default function WhyChooseUs({ language }: WhyChooseUsProps) {
               {t.whyChooseUs.guarantee}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <span className="bg-teal-500/20 text-teal-400 px-6 py-3 rounded-full font-semibold border border-teal-500/30">
+              <span className="bg-teal-500/20 text-teal-300 px-6 py-3 rounded-full font-semibold border border-teal-500/30">
                 English
               </span>
-              <span className="bg-teal-500/20 text-teal-400 px-6 py-3 rounded-full font-semibold border border-teal-500/30">
+              <span className="bg-teal-500/20 text-teal-300 px-6 py-3 rounded-full font-semibold border border-teal-500/30">
                 العربية
               </span>
-              <span className="bg-teal-500/20 text-teal-400 px-6 py-3 rounded-full font-semibold border border-teal-500/30">
+              <span className="bg-teal-500/20 text-teal-300 px-6 py-3 rounded-full font-semibold border border-teal-500/30">
                 Türkçe
               </span>
-              <span className="bg-teal-500/20 text-teal-400 px-6 py-3 rounded-full font-semibold border border-teal-500/30">
+              <span className="bg-teal-500/20 text-teal-300 px-6 py-3 rounded-full font-semibold border border-teal-500/30">
                 Italiano
               </span>
             </div>
